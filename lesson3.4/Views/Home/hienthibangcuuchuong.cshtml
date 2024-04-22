@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Prime Numbers from 1 to 100:</h2>
+<ul>
+    @foreach (var prime in ViewBag.Primes)
+    {
+        <li>@prime</li>
+    }
+</ul>
+
+<h2>Factorials from 1 to 10:</h2>
+<ul>
+    @foreach (var entry in ViewBag.Factorials)
+    {
+        <li>@entry.Key! = @entry.Value</li>
+    }
+</ul>
+
+<h2>Multiplication Tables from 2 to 9:</h2>
+@foreach (var entry in ViewBag.MultiplicationTables)
+{
+    <h3>Times @entry.Key:</h3>
+    <ul>
+        @foreach (var number in entry.Value)
+        {
+            <li>@number</li>
+        }
+    </ul>
+}
+

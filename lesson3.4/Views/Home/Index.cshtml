@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Prime Numbers from 1 to 100:</h2>
+<ul>
+    @foreach (var prime in ViewBag.PrimeNumbers)
+    {
+        <li>@prime</li>
+    }
+</ul>
+
+<h2>Factorials from 1 to 10:</h2>
+<ul>
+    @foreach (var factorial in ViewBag.Factorials)
+    {
+        <li>@factorial</li>
+    }
+</ul>
+
+<h2>Times Tables from 2 to 9:</h2>
+@foreach (var kvp in ViewBag.TimesTables)
+{
+    <h3>Times Table for @kvp.Key:</h3>
+    <ul>
+        @foreach (var item in kvp.Value)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
